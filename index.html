@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center mt-48 text-6xl">Digital Tasbih</h1>
+    </header>
+    <main>
+      <div class="flex justify-around mt-48 text-center">
+
+        <div class="border-2 rounded-lg py-5 px-16">
+          <div class="mb-14">
+            <h1 class="text-4xl">Subhan Allah</h1>
+          </div>
+          <div>
+            <p id="count1" class="text-4xl">0</p>
+          </div>
+          <div class="mt-14">
+            <button id="increment-value"
+              class="border-2 border-rose-600 btn btn-success py-2 px-4">Increment</button>
+            <button id="decrement-value"
+              class="border-2 border-black btn btn-secondary py-2 px-4">Decrement</button>
+          </div>
+        </div>
+
+        <div class="border-2 rounded-lg py-5 px-16">
+          <div class="mb-14">
+            <h1 class="text-4xl">Alhamdulillah</h1>
+          </div>
+          <div>
+            <p id="count2" class="text-4xl">0</p>
+          </div>
+          <div class="mt-14">
+            <button id="2ndincrement-value"
+              class="border-2 border-rose-600 btn btn-success py-2 px-4">Increment</button>
+            <button id="2nddecrement-value"
+              class="border-2 border-black btn btn-secondary py-2 px-4">Decrement</button>
+          </div>
+        </div>
+
+        <div class="border-2 rounded-lg py-5 px-16">
+          <div class="mb-14">
+            <h1 class="text-4xl">Allahuakber</h1>
+          </div>
+          <div>
+            <p id="count3" class="text-4xl">0</p>
+          </div>
+          <div class="mt-14">
+            <button id="3rdincrement-value"
+              class="border-2  border-rose-600 btn btn-success py-2 px-4">Increment</button>
+            <button id="3rddecrement-value"
+              class="border-2 border-black btn btn-secondary py-2 px-4">Decrement</button>
+          </div>
+        </div>
+
+      </div>
+      <section>
+        <div class="flex justify-center mt-20">
+          <button id="reset-all" class="text-center btn btn-warning py-2 border-2 border-rose-600">Reset all Tasbih</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+       
+    </footer>
+    <script src="tasbih.js"></script>
+  </body>
+</html>
