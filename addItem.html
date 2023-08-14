@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>add item</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="w-3/5 m-auto mt-40">
+            <h1 class="text-2xl">Add item in a section</h1>
+            <ul id="list-container" style="list-style-type:circle" class="ml-9 my-10 ">
+                <li class="item">Apple</li>
+                <li class="item">Oange</li>
+                <li class="item">Banana</li>
+                <li class="item">Mango</li>
+            </ul>
+            <!-- <button id="add-btn" class="btn border-2 border-rose-300">add</button> -->
+
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
+            <dialog id="my_modal_2" class="modal">
+                <form method="dialog" class="modal-box">
+                    <label for="">Type item name-</label><br><br>
+                    <input id="add-item" type="text" class="w-3/5 h-12 p-3"><br><br>
+                    <button id="add-btn" class="btn border-2 border-rose-300">add</button>
+                    <p class="py-4">Press ESC key or click outside to close</p>
+                </form>
+                <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                </form>
+            </dialog>
+        </div>
+        <script>
+        document.getElementById('add-btn').addEventListener('click', function(){
+            const addItem = document.getElementById('add-item')
+            const listContainer = document.getElementById('list-container')
+            const li = document.createElement('li')
+            li.innerText = addItem.value
+            listContainer.appendChild(li)
+            li.classList.add('item')
+            addItem.value = ''
+            // listContainer = e.target
+            // console.log(addItem.target) 
+
+        })
+
+        // const items = document.getElementsByClassName('item')
+        // for(let item of items){
+        //     item.addEventListener('click', function(event){
+        //         // console.log(event.target)
+        //         event.target.parentNode.removeChild(event.target)
+
+        //     })
+        // }
+
+        //Event delegate method
+    
+        document.getElementById('list-container').addEventListener('click', function(event){
+            // console.log(event.target)
+            event.target.parentNode.removeChild(event.target)
+        })
+    </script>
+
+    </body>
+</html>
